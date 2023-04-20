@@ -1,0 +1,5 @@
+openai
+os
+Flask
+requests
+render_template
