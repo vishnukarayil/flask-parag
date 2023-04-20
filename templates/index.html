@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>PARAG - Pathology AI Research Assistant</title>
+    </head>
+    <body>
+        <h1>PARAG: Pathology AI Research Assistant with GPT3 (v1.02alpha)</h1>
+        <p>Pathology education powered by ChatGPT</p>
+        <form method="post" action="/">
+            <label for="query">Search anything related to pathology:</label>
+            <input type="text" name="query" id="query">
+            <button type="submit">Search</button>
+        </form>
+        {% if response %}
+        <h2>Your result appears here</h2>
+        <div>{{ response|safe }}</div>
+        {% else %}
+        <h2>Your result will appear here</h2>
+        {% endif %}
+        <h3>Disclaimer</h3>
+        <p>PARAG is an educational tool that uses the GPT-3.5 language model developed by OpenAI to provide users with information related to pathology. Since this is an alpha release, the language model is still learning, and the responses can be edgy at times. We always recommend the use of standard literatures for more accurate answers. Use at your own risk. The app name and all it's components are owned by the developer. The current version is free to use.</p>
+        <p>***Proudly presented by Dr. Vishnu K R***</p>
+    </body>
+</html>
