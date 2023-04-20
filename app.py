@@ -6,7 +6,6 @@ import os
 
 # Set up Flask app
 app = Flask(__name__)
-load_dotenv()
 
 # Set the page title and icon
 favicon_path = os.path.join(os.path.dirname(__file__), 'cropped-PathonotesLogowithin.png')
@@ -14,7 +13,7 @@ app.config['PAGE_TITLE'] = "PARAG - Pathology AI Research Assistant"
 app.config['PAGE_ICON'] = favicon_path
 
 # Authenticate OpenAI API Key
-openai.api_key = os.getenv['OPENAI_API_KEY']
+openai_api_key = os.environ['OPENAI_API_KEY']
 
 # Define the search_in_gpt3 function
 def search_in_gpt3(query):
